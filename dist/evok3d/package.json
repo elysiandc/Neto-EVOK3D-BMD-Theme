@@ -1,0 +1,42 @@
+{
+  "name": "evok3d",
+  "version": "4.2.0",
+  "description": "Custom EVOK3D theme. Based on Skeletal and is built on Bootstrap Material Design 4 and needs to be installed on a Neto 6 system to work at all.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "compile": "npm run build && node_modules/.bin/ntheme compile",
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NetoECommerce/Skeletal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NetoECommerce/Skeletal/issues"
+  },
+  "homepage": "https://github.com/NetoECommerce/Skeletal",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.2",
+    "ntheme": "^1.8.1",
+    "postcss-cssnext": "^3.1.0",
+    "simple-github-release": "git://github.com/brandonsheppard/simple-github-release.git",
+    "Skeletal": "git://github.com/NetoECommerce/Skeletal.git"
+  },
+  "dependencies": {
+    "bootstrap-material-design": "^4.1.1",
+    "jquery": "3.3.1",
+    "popper.js": "1.14.3"
+  },
+  "generated_theme": {
+    "name": "EVOK3D",
+    "branch": "master",
+    "git": "git://github.com/NetoECommerce/Skeletal.git"
+  }
+}

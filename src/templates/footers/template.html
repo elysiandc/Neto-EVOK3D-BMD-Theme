@@ -1,0 +1,140 @@
+	</div>
+</div>
+<div class="container-fluid pb-5">
+	<!-- Brands section -->
+	[%thumb_list type:'content' content_type:'brand' template:'brand' limit:'3' sortby:'sortorder-desc' category:'0'%]
+	    [%param *header%]
+	        <h3 class="text-center display-4 pb-3">Only the best brands</h2>
+	        <div class="row featured-brands justify-content-center">
+	    [%/param%]
+	    [%param *footer%]
+	        </div>
+	    [%/param%]
+	[%/thumb_list%]
+	<!-- End brands sections -->
+</div>
+<footer class="wrapper-footer bg-dark pt-4 mt-4">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-8">
+				<nav class="row" aria-label="Footer menu">
+					[%cache type:'menu' id:'footer-content-menu' ttl:'86400'%]
+						[%menu id:'web_footer'%]
+							[%param *level_1%]
+								<div class="col-12 col-md-4 text-md-left">
+									<ul class="nav flex-column pb-4">
+										<li class="nav-item"><h4 class="nav-link py-0">[@name@]</h4></li>
+										[@next_level@]
+									</ul>
+								</div>
+							[%/param%]
+							[%param *level_2%]
+								<li class="nav-item"><a href="[@url@]" class="nav-link">[@name@]</a></li>
+							[%/param%]
+						[%/menu%]
+					[%/cache%]
+				</nav>
+			</div>
+			<div class="col-12 col-md-4 text-md-left">
+				<div class="newsletter">
+					<h4>Get on the list & get exclusive deals</h4>
+					<p>Enter your email address for special offers from evok3d.com pty ltd</p>
+					<form id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" method="post" action="//evok3d.us8.list-manage.com/subscribe/post?u=622557e3e4e620824b664f6e3&id=5324974667">
+						<div class="input-group input-group-lg">
+							<input id="mce-EMAIL" name="EMAIL" class="elist__input form-control" placeholder="Enter email address..." type="text">
+							<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+							<div style="position: absolute; left: -5000px;"><input type="text" name="b_622557e3e4e620824b664f6e3_5324974667" tabindex="-1" value=""></div>
+							<input name="Submit" id="elist_submit" class="elist__submit btn btn-primary" value="Sign Up" type="submit">
+						</div>
+					</form>
+				</div>
+				<ul class="nav list-social justify-content-center justify-content-md-start pt-2" itemscope itemtype="http://schema.org/Organization" role="contentinfo" aria-label="Social media">
+					<meta itemprop="url" content="[@config:home_url@]"/>
+					<meta itemprop="logo" content="[@config:home_url@][@config:imageurl@]/website_logo.png"/>
+					<meta itemprop="name" content="[@config:company_name@]"/>
+					<!--<li class="nav-item px-1"><a href="[%url type:'page' id:'contact_us'/%]" target="_blank" title="Email us" rel="noopener" aria-label="Email us"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>-->
+					[%if [@config:facebook_account_id@]%]
+					<li class="nav-item px-1"><a itemprop="sameAs" href="[@config:facebook_account_id@]" target="_blank" title="[@config:company_name@] on Facebook" rel="noopener"><i class="fab fa-facebook text-primary" aria-hidden="true"></i><span class="sr-only">Facebook</span></a></li>
+					[%/if%]
+					[%if [@config:twitter_account_id@]%]
+					<li class="nav-item px-1"><a itemprop="sameAs" href="[@config:twitter_account_id@]" target="_blank" title="[@config:company_name@] on Twitter" rel="noopener"><i class="fab fa-twitter text-primary" aria-hidden="true"></i><span class="sr-only">Twitter</span></a></li>
+					[%/if%]
+					[%if [@config:googleplus_account_id@]%]
+					<li class="nav-item px-1"><a itemprop="sameAs" href="[@config:googleplus_account_id@]" target="_blank" title="[@config:company_name@] on Google Plus" rel="noopener"><i class="fab fa-google-plus text-primary" aria-hidden="true"></i><span class="sr-only">Google Plus</span></a></li>
+					[%/if%]
+					[%if [@config:youtube_account_id@]%]
+					<li class="nav-item px-1"><a itemprop="sameAs" href="[@config:youtube_account_id@]" target="_blank" title="[@config:company_name@] on Youtube" rel="noopener"><i class="fab fa-youtube text-primary" aria-hidden="true"></i><span class="sr-only">Youtube</span></a></li>
+					[%/if%]
+					[%if [@config:instagram_account_id@]%]
+					<li class="nav-item px-1"><a itemprop="sameAs" href="[@config:instagram_account_id@]" target="_blank" title="[@config:company_name@] on Instagram" rel="noopener"><i class="fab fa-instagram text-primary" aria-hidden="true"></i><span class="sr-only">Instagram</span></a></li>
+					[%/if%]
+					[%if [@config:pinterest_account_id@]%]
+					<li class="nav-item px-1"><a itemprop="sameAs" href="[@config:pinterest_account_id@]" target="_blank" title="[@config:company_name@] on Pinterest" rel="noopener"><i class="fab fa-pinterest text-primary" aria-hidden="true"></i><span class="sr-only">Pinterest</span></a></li>
+					[%/if%]
+					[%if [@config:tumblr_account_id@]%]
+					<li class="nav-item px-1"><a itemprop="sameAs" href="[@config:tumblr_account_id@]" target="_blank" title="[@config:company_name@] on Tumblr" rel="noopener"><i class="fab fa-tumblr text-primary" aria-hidden="true"></i><span class="sr-only">Tumblr</span></a></li>
+					[%/if%]
+					[%if [@config:linkedin_account_id@]%]
+					<li class="nav-item px-1"><a itemprop="sameAs" href="[@config:linkedin_account_id@]" target="_blank" title="[@config:company_name@] on Linkedin" rel="noopener"><i class="fab fa-linkedin-in text-primary" aria-hidden="true"></i><span class="sr-only">Linkedin</span></a></li>
+					[%/if%]
+				</ul>
+			</div>
+		</div>
+		<div class="row"><div class="col-12"><hr aria-hidden="true"/></div></div>
+		<div class="row">
+			<div class="col-12 col-md-8 d-none d-sm-block">
+				[%checkout_pay_icons show_icon:'1' ignore_balance:'1'%]
+					[%param header%]
+						<ul class="list-inline d-flex flex-wrap" role="contentinfo" aria-label="Accepted payment methods">
+					[%/param%]
+					[%param *body%]
+							<li class="mr-1">
+								<div class="payment-icon-container">
+									<div class="payment-icon" style="background-image: url([@processor_icon_url@]); height: 30px;"><span class="sr-only">[@name@]</span></div>
+								</div>
+							</li>
+					[%/param%]
+					[%param *footer%]
+						</ul>
+					[%/param%]
+				[%/checkout_pay_icons%]
+			</div>
+			<div class="col-12 col-md-4 text-md-left">
+				<p class="small" data-test-id="address">
+					<strong>Copyright &copy; [%format type:'date' format:'#Y'%]today[%/format%] [@config:company_name@].</strong>
+					[%if [@config:show_platform_branding@]%]<a href="https://www.netohq.com" title="Neto E-commerce Retail Management Platform" target="_blank" rel="noopener">E-commerce software by Neto</a>[%/if%]<br/>
+					[%if [@config:company_abn@]%]<strong>[%if [@config:PRIMARY_ABN_LABEL@]%][@config:PRIMARY_ABN_LABEL@][%else%]ABN[%/if%]:</strong> [@config:company_abn@]<br>[%/ if%]
+					[%if [@config:company_poaddr@]%]<strong>Address:</strong> [@config:company_poaddr@][%/ if%]
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+<div class="modal fade" id="termsModal">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Terms &amp; Conditions</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">[%content_zone id:'terms'/%]</div>
+			<div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="privacyModal">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Privacy Policy</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">[%show_content id:'2'%][%param *body%][@content_description1@][%/param%][%/show_content%]</div>
+			<div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+		</div>
+	</div>
+</div>
+<!-- Required Neto Scripts - DO NOT REMOVE -->
+[%load_template file:'footers/includes/scripts.template.html'/%]
+</body>
+</html>

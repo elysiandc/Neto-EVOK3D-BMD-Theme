@@ -1,0 +1,146 @@
+	</div><!-- Close row from header--> 
+</div><!-- Close container from header--> 
+<div class="wrapper-hero">
+	[%if [@config:show_home_ads@]%]
+		[%advert type:'text' template:'carousel' limit:'10' ad_group:'hero-home'%]
+			[%param *header%]
+				<section id="homepageCarousel" class="carousel slide" data-ride="carousel" aria-label="Banner images">
+					[%if [@total_showing@] > 1%]
+						<ol class="carousel-indicators">
+							[%site_value id:'counter' type:'load'/%]
+						</ol>
+					[%/if%]
+					<div class="carousel-inner">
+			[%/param%]
+			[%param *footer%]
+					</div>
+					[%if [@total_showing@] > 1%]
+						<a class="carousel-control-prev" href="#homepageCarousel" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#homepageCarousel" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					[%/if%]
+				</section>
+			[%/param%]
+			[%param *ifempty%]
+				<a class="neto-placeholder neto-placeholder-rotator btn-loads" data-loading-text="<i class='fa fa-spinner fa-spin' style='font-size: 14px'></i>" href="[@config:home_url@]/_cpanel?item=adw&page=view&id=New&plan_id=1">
+					Click to add a banner<br/>
+				</a>
+			[%/param%]
+		[%/advert%]
+	[%/if%]
+</div>
+<!-- Icons section -->
+<div class="container-fluid">
+	[%advert type:'text' template:'ad-icons' limit:'8' ad_group:'ad-icons'%]
+		[%param *header%]
+			<div class="row ad-icons py-4">
+		[%/param%]
+		[%param footer%]
+			</div>
+		[%/param%]
+	[%/advert%]
+</div>
+<!-- End icons section -->
+<div class="bg-dark text-light">
+	<div class="container-fluid">
+		<div class="row p-5">
+			<!-- Section for the Title -->
+			<div class="col-12 text-center pb-5">
+				[%content_zone id:'every_business'%][%end content_zone%]<br>
+			</div>
+			<!-- Section for the copy -->
+			<div class="col-12 col-sm-6 col-lg-4 pb-4">
+				[%content_zone id:'featured_production'%][%end content_zone%]
+			</div>
+			<!-- Section for the Image -->
+			<div class="col-12 col-sm-6 col-lg-4 offset-lg-2">
+				[%content_zone id:'featured_production_image'%][%end content_zone%]
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="row p-5">
+		<!-- Section for the Image -->
+		<div class="col-12 col-sm-6 col-lg-4 offset-lg-1">
+			[%content_zone id:'featured_profession_image'%][%end content_zone%]
+		</div>
+		<!-- Section for the copy -->
+		<div class="col-12 col-sm-6 col-lg-4 offset-lg-1">
+			[%content_zone id:'featured_professional'%][%end content_zone%]
+		</div>
+	</div>
+</div>
+<div class="bg-light text-light">
+	<div class="container-fluid">
+		<div class="row p-5">
+			[%if [@config:show_home_ads@]%]
+				[%advert type:'product' limit:'2' template:'list' ad_group:''%]
+					[%param *header%]
+						<h2 class="sr-only">Featured products</h2>
+						<section class="row products-row p-0 p-md-5 mx-0 mx-md-5" aria-label="Featured products">
+					[%/param%]
+					[%param footer%]
+						</section>
+					[%/param%]
+					[%param *ifempty%]
+						[%random_products filter_category:'' template:'list' limit:'2'%]
+							[%param *header%]
+								<h2 class="sr-only">Featured products</h2>
+								<section class="row products-row p-0 p-md-5 mx-0 mx-md-5" aria-label="Featured products">
+							[%/param%]
+							[%param *footer%]
+								</section>
+							[%/param%]
+						[%/random_products%]
+					[%/param%]
+				[%/advert%]
+			[%/if%]
+		</div>
+	</div>
+</div>
+<div class="bg-dark text-light">
+	<div class="container-fluid">
+		<div class="row p-3 p-md-5">
+			<div class="col-12 col-md-8 mx-auto text-center">
+				[%content_zone id:'featured_products'%][%end content_zone%]
+			</div>
+			<div class="col-12">
+				[%advert type:'product' limit:'8' template:'' ad_group:''%]
+					[%param *header%]
+						<h2 class="sr-only">Featured products</h2>
+						<section class="row products-row p-0 p-md-5 mx-0 mx-md-5" aria-label="Featured products">
+							<div class="col-12 3columns">
+					[%/param%]
+					[%param footer%]
+							</div>
+						</section>
+					[%/param%]
+					[%param *ifempty%]
+						[%random_products filter_category:'' template:'' limit:'8'%]
+							[%param *header%]
+								<h2 class="sr-only">Featured products</h2>
+								<section class="row products-row p-0 p-md-5 mx-0 mx-md-5" aria-label="Featured products">
+									<div class="col-12 3columns">
+							[%/param%]
+							[%param *footer%]
+									</div>
+								</section>
+							[%/param%]
+						[%/random_products%]
+					[%/param%]
+				[%/advert%]
+			</div>
+		</div>
+	</div>
+</div>
+<!--<div class="container-fluid pb-5">
+	<div class="row">
+		<div class="col-12" id="homepage-content" aria-label="Main description">[@page_content@] This shows description from the Home web page </div>
+	</div>
+</div>-->
